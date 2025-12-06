@@ -1,0 +1,88 @@
+# @dotmac/component-library
+
+Welcome to the DotMac Component Library - a comprehensive collection of reusable React components, design tokens, and patterns for building modern web applications.
+
+## Packages
+
+### @dotmac/design-tokens
+
+Unified design tokens including colors, typography, spacing, motion, and shadows. Includes a ThemeProvider for portal-specific theming.
+
+```tsx
+import { ThemeProvider, useTheme, colors } from '@dotmac/design-tokens';
+```
+
+### @dotmac/core
+
+Core UI primitives and styled components built on Radix UI. Includes Button, Input, Card, Modal, and more.
+
+```tsx
+import { Button, Input, Card, Modal } from '@dotmac/core';
+```
+
+### @dotmac/data-table
+
+A powerful data table component with sorting, pagination, selection, and column customization.
+
+```tsx
+import { DataTable, useDataTablePagination } from '@dotmac/data-table';
+```
+
+### @dotmac/forms
+
+Form components with React Hook Form integration and pluggable validation (Zod/Yup).
+
+```tsx
+import { Form, FormField, ControlledInput } from '@dotmac/forms';
+import { zodResolver, z } from '@dotmac/forms/zod';
+```
+
+### @dotmac/charts
+
+Chart components built on Recharts for data visualization.
+
+```tsx
+import { LineChart, BarChart, PieChart, AreaChart } from '@dotmac/charts';
+```
+
+### @dotmac/dashboards
+
+Dashboard layout patterns including KPI tiles, filter bars, chart grids, and drill-down panels.
+
+```tsx
+import {
+  DashboardLayout,
+  KPITile,
+  FilterBar,
+  ChartGrid,
+} from '@dotmac/dashboards';
+```
+
+## Portal Themes
+
+The library supports multiple portal themes:
+
+- **Admin** - Blue primary color, for administrative interfaces
+- **Customer** - Green primary color, for customer-facing portals
+- **Reseller** - Purple primary color, for partner/reseller dashboards
+- **Technician** - Orange primary color, for field operations
+- **Management** - Cyan primary color, for executive dashboards
+
+## Getting Started
+
+```bash
+# Install packages
+pnpm add @dotmac/core @dotmac/design-tokens
+
+# Use in your app
+import { ThemeProvider } from '@dotmac/design-tokens';
+import { Button } from '@dotmac/core';
+
+function App() {
+  return (
+    <ThemeProvider portal="admin">
+      <Button variant="primary">Click me</Button>
+    </ThemeProvider>
+  );
+}
+```
