@@ -30,7 +30,7 @@ import { cn } from "./utils/cn";
 // ============================================================================
 
 export interface FormProps<TFieldValues extends FieldValues>
-  extends Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onError"> {
+  extends Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onError" | "children"> {
   /** Form methods from useForm or useFormContext */
   form?: UseFormReturn<TFieldValues>;
   /** Default values for uncontrolled mode */

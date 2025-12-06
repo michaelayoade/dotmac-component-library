@@ -56,6 +56,12 @@ export interface ThemeConfig {
   brand?: BrandConfig;
 }
 
+export interface FontFamily {
+  sans: readonly string[] | string[];
+  serif: readonly string[] | string[];
+  mono: readonly string[] | string[];
+}
+
 export interface Theme {
   colors: {
     primary: ColorScale;
@@ -70,7 +76,7 @@ export interface Theme {
     text: string;
   };
   typography: {
-    fontFamily: typeof fontFamily;
+    fontFamily: FontFamily;
     fontSize: typeof fontSize;
     fontWeight: typeof fontWeight;
     textStyles: typeof textStyles;
@@ -126,7 +132,7 @@ export function buildTheme(config: ThemeConfig): Theme {
     },
     typography: {
       fontFamily: config.brand?.fontFamily
-        ? { ...fontFamily, sans: config.brand.fontFamily }
+        ? { sans: config.brand.fontFamily, serif: fontFamily.serif, mono: fontFamily.mono }
         : fontFamily,
       fontSize,
       fontWeight,
