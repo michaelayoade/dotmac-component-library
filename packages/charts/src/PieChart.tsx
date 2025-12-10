@@ -51,7 +51,7 @@ export interface PieChartProps {
   /** Custom label formatter */
   labelFormatter?: (entry: PieChartDataPoint, percent: number) => string;
   /** Colors array */
-  colors?: string[];
+  colors?: readonly string[] | string[];
   /** CSS class name */
   className?: string;
 }

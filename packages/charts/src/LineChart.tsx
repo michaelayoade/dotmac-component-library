@@ -64,7 +64,7 @@ export interface LineChartProps {
   /** Custom tooltip formatter */
   tooltipFormatter?: (value: number, name: string) => string;
   /** Custom tooltip */
-  customTooltip?: React.ComponentType<TooltipProps<number, string>>;
+  customTooltip?: React.FC<TooltipProps<number, string>>;
   /** CSS class name */
   className?: string;
 }
