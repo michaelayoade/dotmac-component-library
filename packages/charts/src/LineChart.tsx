@@ -132,7 +132,7 @@ export function LineChart({
 
           {showTooltip && (
             <Tooltip
-              content={customTooltip}
+              content={customTooltip as any}
               formatter={tooltipFormatter}
               contentStyle={{
                 backgroundColor: chartTheme.tooltip.background,

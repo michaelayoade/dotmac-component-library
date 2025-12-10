@@ -150,6 +150,21 @@ export const colors = {
     900: "#164e63",
     950: "#083344",
   },
+
+  // Dotmac Teal - Insights UI primary
+  dotmac: {
+    50: "#e6fffa",
+    100: "#b8fff0",
+    200: "#7affe1",
+    300: "#3af7d2",
+    400: "#12e8c2",
+    500: "#00d4aa",
+    600: "#00b38f",
+    700: "#008f74",
+    800: "#006f5c",
+    900: "#004c3f",
+    950: "#003428",
+  },
 } as const;
 
 // ============================================================================
@@ -198,7 +213,8 @@ export type PortalVariant =
   | "management"
   | "platformAdmin"
   | "platformReseller"
-  | "platformTenant";
+  | "platformTenant"
+  | "insights";
 
 export interface PortalColorScheme {
   name: string;
@@ -282,6 +298,15 @@ export const portalColors: Record<PortalVariant, PortalColorScheme> = {
     surface: "#ffffff",
     text: "#581c87",
     sidebarMode: "light",
+  },
+  insights: {
+    name: "Dotmac Insights",
+    primary: colors.dotmac,
+    accent: colors.alert[400],
+    background: "#0b1220",
+    surface: "#0f172a",
+    text: "#e2e8f0",
+    sidebarMode: "dark",
   },
 };
 

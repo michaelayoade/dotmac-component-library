@@ -96,7 +96,7 @@ export function createConfirmationSchema<T extends z.ZodTypeAny>(
  * Create async validation schema
  */
 export function createAsyncValidation<T>(
-  zod: typeof z,
+  _zod: typeof z,
   baseSchema: z.ZodType<T>,
   asyncValidator: (value: T) => Promise<boolean>,
   errorMessage: string

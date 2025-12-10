@@ -64,6 +64,19 @@ export {
   Modal,
   type DialogContentProps,
   type ModalProps,
+
+  // Select
+  Select,
+  SelectItem,
+  type SelectProps,
+  type SelectOption,
+
+  // Toast
+  ToastProvider,
+  ToastViewport,
+  useToast,
+  type ToastMessage,
+  type ToastVariant,
 } from "./primitives";
 
 // ============================================================================

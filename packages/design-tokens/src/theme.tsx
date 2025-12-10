@@ -126,7 +126,7 @@ export function buildTheme(config: ThemeConfig): Theme {
     },
     typography: {
       fontFamily: config.brand?.fontFamily
-        ? { ...fontFamily, sans: config.brand.fontFamily }
+        ? { ...fontFamily, sans: config.brand.fontFamily as unknown as typeof fontFamily.sans }
         : fontFamily,
       fontSize,
       fontWeight,

@@ -13,7 +13,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { chartColors, chartTheme, getChartColor } from "./theme";
+import { chartColors, chartTheme } from "./theme";
 
 // ============================================================================
 // Types
@@ -143,7 +143,7 @@ export function PieChart({
   endAngle = 360,
   labelType = "percent",
   labelFormatter,
-  colors = chartColors.series,
+  colors = [...chartColors.series],
   className,
 }: PieChartProps) {
   return (
